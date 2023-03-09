@@ -1,0 +1,42 @@
+@use '../../scss/abstracts/variables' as var;
+
+.pagination-container {
+  display: flex;
+  gap: 0.4rem;
+  list-style-type: none;
+
+  .pagination-item {
+    display: flex;
+    font-size: var.$font-size-medium;
+    width: 3.4rem;
+    height: 3.4rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var.$border-radius-medium;
+    padding: var.$padding-smaller;
+    color: var.$white;
+
+    &.icon {
+      font-size: var.$font-size-big;
+    }
+
+    &.dots {
+      pointer-events: none;
+      color: var.$white-disabled;
+    }
+
+    &.selected {
+      background-color: var.$black-hover;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: var.$white-disabled;
+    }
+
+    &:hover {
+      background-color: var.$black-hover;
+    }
+  }
+}

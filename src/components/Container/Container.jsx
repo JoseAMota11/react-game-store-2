@@ -42,8 +42,6 @@ export const Container = () => {
             ? data.map((game) => <Card key={game.id} data={game} />)
             : null}
         </div>
-      </Main>
-      <section className='pagination-container'>
         <Pagination
           className='pagination-bar'
           currentPage={currentPage}
@@ -51,7 +49,7 @@ export const Container = () => {
           pageSize={pageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
-      </section>
+      </Main>
     </>
   );
 };

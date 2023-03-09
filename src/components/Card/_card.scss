@@ -9,4 +9,8 @@
     height: 13rem;
     object-fit: cover;
   }
+
+  &__name {
+    font-size: $font-size-medium;
+  }
 }
