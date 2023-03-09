@@ -42,7 +42,7 @@ export const Pagination = (props) => {
         })}
         onClick={onPrevious}
       >
-        <ion-icon name='chevron-back-outline icon left'></ion-icon>
+        <ion-icon name='chevron-back-outline'></ion-icon>
       </li>
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
@@ -66,7 +66,7 @@ export const Pagination = (props) => {
         })}
         onClick={onNext}
       >
-        <ion-icon name='chevron-forward-outline icon right'></ion-icon>
+        <ion-icon name='chevron-forward-outline'></ion-icon>
       </li>
     </ul>
   );

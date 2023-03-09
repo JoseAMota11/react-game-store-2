@@ -14,6 +14,10 @@ export const Container = () => {
   const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
+  useEffect(() => {
     const getGames = (async function () {
       const options = {
         method: 'GET',

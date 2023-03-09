@@ -17,13 +17,13 @@
     padding: var.$padding-smaller;
     color: var.$white;
 
-    &.icon {
-      font-size: var.$font-size-big;
-    }
-
     &.dots {
       pointer-events: none;
       color: var.$white-disabled;
+    }
+
+    ion-icon {
+      font-size: var.$font-size-big;
     }
 
     &.selected {
