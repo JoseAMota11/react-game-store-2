@@ -18,7 +18,7 @@ class Fetch {
 
     const data = await fetch(url, options);
     const response = await data.json();
-    console.log(response);
+    return response;
   }
 
   async post() {}
