@@ -1,0 +1,5 @@
+@use '../../scss/abstracts/mixins' as mix;
+
+.container {
+  @include mix.grid(3, 1fr, 1rem);
+}

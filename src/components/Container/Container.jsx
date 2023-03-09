@@ -4,6 +4,7 @@ import { KEY, URL } from '../../helpers/constants';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Card } from '../Card/Card';
+import { Main } from '../Main/Main';
 
 const pageSize = 20;
 
@@ -35,16 +36,22 @@ export const Container = () => {
 
   return (
     <>
-      {data.length > 0 && totalCount
-        ? data.map((game) => <Card key={game.id} data={game} />)
-        : null}
-      <Pagination
-        className='pagination-bar'
-        currentPage={currentPage}
-        totalCount={totalCount}
-        pageSize={pageSize}
-        onPageChange={(page) => setCurrentPage(page)}
-      />
+      <Main>
+        <div className='container'>
+          {data.length > 0 && totalCount
+            ? data.map((game) => <Card key={game.id} data={game} />)
+            : null}
+        </div>
+      </Main>
+      <section className='pagination-container'>
+        <Pagination
+          className='pagination-bar'
+          currentPage={currentPage}
+          totalCount={totalCount}
+          pageSize={pageSize}
+          onPageChange={(page) => setCurrentPage(page)}
+        />
+      </section>
     </>
   );
 };

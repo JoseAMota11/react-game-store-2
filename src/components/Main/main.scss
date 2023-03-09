@@ -1,0 +1,7 @@
+@use '../../scss/abstracts/mixins' as mix;
+@use '../../scss/abstracts/variables' as var;
+
+.main {
+  @include mix.flexbox(column, center, center);
+  padding: var.$padding-medium;
+}
