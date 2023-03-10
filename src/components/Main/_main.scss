@@ -4,4 +4,9 @@
 .main {
   @include mix.flexbox(column, center, center, 2rem);
   padding: var.$padding-medium 0;
+
+  @media (max-width: var.$screen-breakpoint-biggest) {
+    width: 100%;
+    padding: var.$padding-small;
+  }
 }

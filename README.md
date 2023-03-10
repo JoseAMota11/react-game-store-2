@@ -5,6 +5,7 @@
 - [x] Add pagination
 - [x] Implementing loading spinner
 - [x] Adding responsiveness to the container
+- [ ] Adding responsiveness to the navbar
 - [ ] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)

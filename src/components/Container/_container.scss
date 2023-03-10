@@ -11,7 +11,7 @@
 
   @media (max-width: var.$screen-breakpoint-biggest) {
     width: 100%;
-    padding: var.$padding-small;
+    justify-content: center;
     @include mix.grid(2, 350px, 1rem);
   }
 

@@ -16,6 +16,7 @@
   &__name {
     font-size: var.$font-size-small;
     padding-top: var.$padding-small;
+    font-weight: 400;
   }
 
   @media (max-width: var.$screen-breakpoint-biggest) {
