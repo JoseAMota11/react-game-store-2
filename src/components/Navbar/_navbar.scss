@@ -1,0 +1,42 @@
+@use '../../scss/abstracts/variables' as var;
+@use '../../scss/abstracts/mixins' as mix;
+
+.navbar {
+  @include mix.flexbox(row, center, center, 1rem);
+  width: var.$width-bigger;
+  height: var.$navbar-height;
+  color: var.$white;
+  background-color: var.$navbar-blue;
+  border-radius: var.$border-radius-medium;
+
+  &-list {
+    @include mix.grid(10, 1fr, 0);
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+
+    &__btn {
+      font-size: var.$font-size-bigger;
+      @include mix.flexbox(row, unset, center, 0);
+    }
+
+    &__logo {
+      grid-column: 2 / 4;
+      font-size: var.$font-size-medium;
+    }
+
+    &__search {
+      grid-column: 7 / -1;
+      @include mix.flexbox(row, center, unset, 0);
+
+      .list__search-input {
+        width: 90%;
+        height: var.$input-height-small;
+        border-radius: var.$border-radius-small;
+        text-indent: var.$padding-smaller;
+        color: var.$white;
+      }
+    }
+  }
+}

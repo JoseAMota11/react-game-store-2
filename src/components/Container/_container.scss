@@ -1,5 +1,7 @@
 @use '../../scss/abstracts/mixins' as mix;
+@use '../../scss/abstracts/variables' as var;
 
 .container {
   @include mix.grid(3, 1fr, 1rem);
+  width: var.$width-bigger;
 }

@@ -27,7 +27,7 @@
     }
 
     &.selected {
-      background-color: var.$black-hover;
+      background-color: var.$dark-blue-hover;
     }
 
     &.disabled {
@@ -36,7 +36,7 @@
     }
 
     &:hover {
-      background-color: var.$black-hover;
+      background-color: var.$dark-blue-hover;
     }
   }
 }

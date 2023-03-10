@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
+import { Navbar } from '../Navbar/Navbar';
 
 const pageSize = 20;
 
@@ -41,6 +42,7 @@ export const Container = () => {
   return (
     <>
       <Main>
+        <Navbar />
         <div className='container'>
           {data.length > 0 && totalCount
             ? data.map((game) => <Card key={game.id} data={game} />)
