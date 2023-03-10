@@ -6,6 +6,32 @@
   width: var.$width-bigger;
 
   .loader {
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: var.$screen-breakpoint-biggest) {
+    width: 100%;
+    padding: var.$padding-small;
+    @include mix.grid(2, 350px, 1rem);
+  }
+
+  @media (max-width: var.$screen-breakpoint-bigger) {
+    @include mix.grid(2, 310px, 1rem);
+  }
+
+  @media (max-width: var.$screen-breakpoint-big) {
+    @include mix.grid(2, 280px, 1rem);
+  }
+
+  @media (max-width: var.$screen-breakpoint-medium) {
+    @include mix.grid(2, 240px, 1rem);
+  }
+
+  @media (max-width: var.$screen-breakpoint-small) {
+    @include mix.grid(2, 210px, 1rem);
+  }
+
+  @media (max-width: var.$screen-breakpoint-smaller) {
+    @include mix.grid(1, 100%, 1rem);
   }
 }
