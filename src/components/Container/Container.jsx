@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
 import { Navbar } from '../Navbar/Navbar';
+import { Loading } from '../Loading/Loading';
 
 const pageSize = 20;
 
@@ -13,10 +14,7 @@ export const Container = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  }, [currentPage]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getGames = (async function () {
@@ -33,9 +31,12 @@ export const Container = () => {
         page: currentPage,
       };
 
+      setLoading(true);
       const result = await fetchSomething.get(URL, req, options);
       setTotalCount(result.count);
       setData(result.results);
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      setLoading(false);
     })();
   }, [currentPage]);
 
@@ -44,9 +45,11 @@ export const Container = () => {
       <Main>
         <Navbar />
         <div className='container'>
-          {data.length > 0 && totalCount
-            ? data.map((game) => <Card key={game.id} data={game} />)
-            : null}
+          {loading ? (
+            <Loading />
+          ) : (
+            data.map((game) => <Card key={game.id} data={game} />)
+          )}
         </div>
         <Pagination
           className='pagination-bar'

@@ -4,4 +4,8 @@
 .container {
   @include mix.grid(3, 1fr, 1rem);
   width: var.$width-bigger;
+
+  .loader {
+    grid-column: 2 / 3;
+  }
 }
