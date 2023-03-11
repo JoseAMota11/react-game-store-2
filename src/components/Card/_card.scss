@@ -5,6 +5,7 @@
   background-color: var.$blue;
   padding: var.$padding-small;
   border-radius: var.$border-radius-medium;
+  box-shadow: var.$box-shadow-card;
 
   &__image {
     width: 100%;
@@ -13,43 +14,43 @@
     border-radius: var.$border-radius-small;
   }
 
-  &__name {
-    font-size: var.$font-size-small;
-    padding-top: var.$padding-small;
-    font-weight: 400;
-  }
+  &__info {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    padding: var.$padding-smaller 0;
 
-  @media (max-width: var.$screen-breakpoint-biggest) {
-    &__image {
-      height: 14rem;
-    }
-
-    &__name {
+    .info-name {
       font-size: var.$font-size-small;
     }
-  }
 
-  @media (max-width: var.$screen-breakpoint-bigger) {
-    &__image {
-      height: 10rem;
-    }
-
-    &__name {
-      padding-top: var.$padding-smaller;
+    .info-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      justify-content: end;
     }
   }
 
   @media (max-width: var.$screen-breakpoint-small) {
     padding: var.$padding-smaller;
 
-    &__image {
-      height: 8rem;
+    &__info {
+      grid-template-columns: 65% 35%;
+  
+      .info-name {
+        font-size: var.$font-size-smaller;
+      }
+  
+      .info-rating {
+        font-size: var.$font-size-smaller;
+      }
     }
   }
 
   @media (max-width: var.$screen-breakpoint-smaller) {
     &__image {
-      height: 12rem;
+      height: 10rem;
     }
   }
 }

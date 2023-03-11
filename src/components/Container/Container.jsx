@@ -43,7 +43,9 @@ export const Container = () => {
   return (
     <>
       <Main>
-        <Navbar />
+        <div className='center'>
+          <Navbar />
+        </div>
         <div className='container'>
           {loading ? (
             <Loading />
@@ -51,13 +53,15 @@ export const Container = () => {
             data.map((game) => <Card key={game.id} data={game} />)
           )}
         </div>
-        <Pagination
-          className='pagination-bar'
-          currentPage={currentPage}
-          totalCount={totalCount}
-          pageSize={pageSize}
-          onPageChange={(page) => setCurrentPage(page)}
-        />
+        <div className='center'>
+          <Pagination
+            className='pagination-bar'
+            currentPage={currentPage}
+            totalCount={totalCount}
+            pageSize={pageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+        </div>
       </Main>
     </>
   );

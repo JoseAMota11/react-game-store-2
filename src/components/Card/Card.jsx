@@ -1,5 +1,5 @@
 export const Card = ({ data }) => {
-  const { background_image, name } = data;
+  const { background_image, name, rating, rating_top } = data;
 
   return (
     <div className='container-card'>
@@ -8,7 +8,13 @@ export const Card = ({ data }) => {
         src={background_image}
         alt={name}
       />
-      <h3 className='container-card__name'>{name}</h3>
+      <div className="container-card__info">
+        <h3 className='info-name'>{name}</h3>
+        <span className='info-rating'>
+          <ion-icon name='star'></ion-icon>
+          {rating} / {rating_top}
+        </span>
+      </div>
     </div>
   );
 };

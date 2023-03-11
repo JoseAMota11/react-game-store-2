@@ -41,19 +41,38 @@
   }
 
   @media (max-width: var.$screen-breakpoint-biggest) {
-    width: 100%;
+    // width: 100%;
     padding: var.$padding-small;
-    gap: 0.1rem;
+    gap: 0.4rem;
+    align-items: center;
     justify-content: center;
 
     .pagination-item {
       font-size: var.$font-size-small;
-      width: 3rem;
-      height: 3rem;
+      width: 2.6rem;
+      height: 2.6rem;
       border-radius: var.$border-radius-small;
+      padding: var.$padding-smallest;
 
       ion-icon {
         font-size: var.$font-size-medium;
+      }
+    }
+  }
+
+  @media (max-width: var.$screen-breakpoint-small) {
+    justify-content: space-between;
+    padding: 0;
+
+    .pagination-item {
+      width: max-content;
+      height: max-content;
+
+      ion-icon,
+      &.dots,
+      &.selected,
+      &.disabled {
+        font-size: var.$font-size-small;
       }
     }
   }

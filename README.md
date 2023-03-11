@@ -5,7 +5,10 @@
 - [x] Add pagination
 - [x] Implementing loading spinner
 - [x] Adding responsiveness to the container
-- [ ] Adding responsiveness to the navbar
+- [x] Adding responsiveness to the navbar
+- [x] Adding responsiveness to the pagination
+- [ ] Create a login page
+- [ ] Create a register page
 - [ ] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)
