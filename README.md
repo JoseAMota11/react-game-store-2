@@ -12,7 +12,7 @@
 - [ ] Create a login page (Functionality)
 - [ ] Create a register page (Functionality)
 - [ ] Create and implement an Error component
-- [ ] Implement routing
+- [x] Implement routing
 - [ ] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)
