@@ -7,8 +7,10 @@
 - [x] Adding responsiveness to the container
 - [x] Adding responsiveness to the navbar
 - [x] Adding responsiveness to the pagination
-- [ ] Create a login page
-- [ ] Create a register page
+- [x] Create a login page (Design)
+- [x] Create a register page (Design)
+- [ ] Create a login page (Functionality)
+- [ ] Create a register page (Functionality)
 - [ ] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)

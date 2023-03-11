@@ -1,9 +1,10 @@
-@use './components/Main/main.scss';
-@use './components/Container/container.scss';
-@use './components/Card/card.scss';
-@use './components/Pagination/pagination.scss';
-@use './components/Navbar/navbar.scss';
+@use './components/Main/main';
+@use './components/Container/container';
+@use './components/Card/card';
+@use './components/Pagination/pagination';
+@use './components/Navbar/navbar';
 @use './components/Loading/loading';
+@use './components/Login/login';
 @use './scss/abstracts/mixins';
 @use './scss/abstracts/variables';
 @use './scss/base/resets';

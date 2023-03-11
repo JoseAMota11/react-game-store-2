@@ -7,6 +7,7 @@ import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
 import { Navbar } from '../Navbar/Navbar';
 import { Loading } from '../Loading/Loading';
+import { Login } from '../Login/Login';
 
 const pageSize = 20;
 
