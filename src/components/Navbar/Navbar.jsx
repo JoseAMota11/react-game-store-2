@@ -14,9 +14,6 @@ const Navbar = () => {
     <nav className='navbar'>
       <ul className='navbar-list' ref={refNavbarList}>
         <li className='navbar-list__logo'>Game Store</li>
-        <li className='navbar-list__login'>
-          <Link to='/login' className='link'>Login</Link>
-        </li>
         <li className='navbar-list__search'>
           <input
             className='list__search-input'
@@ -24,8 +21,13 @@ const Navbar = () => {
             type='search'
           />
         </li>
+        <li className='navbar-list__login'>
+          <Link to='/login' className='link'>
+            Login
+          </Link>
+        </li>
       </ul>
-      <div
+      {/* <div
         onClick={openMenu}
         className='navbar-hamburger'
         ref={refNavbarHamburger}
@@ -33,7 +35,7 @@ const Navbar = () => {
         <span className='bar'></span>
         <span className='bar'></span>
         <span className='bar'></span>
-      </div>
+      </div> */}
     </nav>
   );
 };
