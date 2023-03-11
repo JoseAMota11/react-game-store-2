@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   font-size: var.$font-size-small;
-  gap: 1rem;
+  gap: 2rem;
   color: var.$white;
 
   &-options {
@@ -18,7 +18,8 @@
     justify-content: space-between;
 
     .options__login,
-    .options__register {
+    .options__register,
+    .options__cancel {
       width: 47%;
       height: 2.4rem;
     }
@@ -55,5 +56,11 @@
   &-button {
     width: 100%;
     height: 2.4rem;
+  }
+
+  &-back {
+    align-self: center;
+    font-size: var.$font-size-smaller;
+    color: var.$white;
   }
 }

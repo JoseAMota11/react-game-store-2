@@ -11,6 +11,8 @@
 - [x] Create a register page (Design)
 - [ ] Create a login page (Functionality)
 - [ ] Create a register page (Functionality)
+- [ ] Create and implement an Error component
+- [ ] Implement routing
 - [ ] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)

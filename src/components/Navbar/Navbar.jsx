@@ -1,6 +1,7 @@
 import { useRef } from 'react';
+import Link from '../Router/Link';
 
-export const Navbar = () => {
+const Navbar = () => {
   const refNavbarList = useRef(null);
   const refNavbarHamburger = useRef(null);
 
@@ -13,6 +14,9 @@ export const Navbar = () => {
     <nav className='navbar'>
       <ul className='navbar-list' ref={refNavbarList}>
         <li className='navbar-list__logo'>Game Store</li>
+        <li className='navbar-list__login'>
+          <Link to='/login' className='link'>Login</Link>
+        </li>
         <li className='navbar-list__search'>
           <input
             className='list__search-input'
@@ -33,3 +37,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;

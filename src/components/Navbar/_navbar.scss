@@ -46,3 +46,13 @@
     width: 100%;
   }
 }
+
+.link {
+  background-color: var.$white;
+  padding: var.$padding-smallest var.$padding-medium;
+  color: var.$navbar-blue;
+  border-radius: var.$border-radius-small;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}

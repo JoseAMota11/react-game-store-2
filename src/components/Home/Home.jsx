@@ -5,13 +5,12 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
-import { Navbar } from '../Navbar/Navbar';
 import { Loading } from '../Loading/Loading';
-import { Login } from '../Login/Login';
+import Navbar from '../Navbar/Navbar';
 
 const pageSize = 20;
 
-export const Container = () => {
+const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
@@ -44,7 +43,7 @@ export const Container = () => {
   return (
     <>
       <Main>
-        <div className='center'>
+        <div className="center">
           <Navbar />
         </div>
         <div className='container'>
@@ -67,3 +66,5 @@ export const Container = () => {
     </>
   );
 };
+
+export default Home;
