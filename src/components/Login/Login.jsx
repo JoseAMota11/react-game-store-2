@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { classnames } from '../../helpers/classnames';
+import React, { useState } from 'react';
+import classnames from '../../helpers/classnames';
 import Link from '../Router/Link';
 
-const Login = () => {
+function Login() {
   const [selectedLogin, setSelectedLogin] = useState(true);
   const [selectedRegister, setSelectedRegister] = useState(false);
 
@@ -21,11 +21,12 @@ const Login = () => {
   };
 
   return (
-    <div className='center-login'>
-      <div className='login'>
-        <h3 className='login-title'>{selectedLogin ? 'Login' : 'Register'}</h3>
-        <div className='login-options'>
+    <div className="center-login">
+      <div className="login">
+        <h3 className="login-title">{selectedLogin ? 'Login' : 'Register'}</h3>
+        <div className="login-options">
           <button
+            type="button"
             onClick={loginUser}
             className={classnames('options__login', {
               selected: selectedLogin,
@@ -34,6 +35,7 @@ const Login = () => {
             Login
           </button>
           <button
+            type="button"
             onClick={registerUser}
             className={classnames('options__register', {
               selected: selectedRegister,
@@ -42,41 +44,41 @@ const Login = () => {
             Register
           </button>
         </div>
-        <div className='login-email'>
-          <ion-icon name='mail-outline'></ion-icon>
+        <div className="login-email">
+          <ion-icon name="mail-outline" />
           <input
-            className='login-email__input'
-            type='email'
+            className="login-email__input"
+            type="email"
             placeholder={selectedRegister ? 'Email' : 'E.g. example@gmail.com'}
           />
         </div>
-        <div className='login-password'>
-          <ion-icon name='lock-closed-outline'></ion-icon>
+        <div className="login-password">
+          <ion-icon name="lock-closed-outline" />
           <input
-            className='login-password__input'
-            type='password'
+            className="login-password__input"
+            type="password"
             placeholder={selectedRegister ? 'Password' : '********'}
           />
         </div>
         {selectedRegister ? (
-          <div className='login-password'>
-            <ion-icon name='lock-closed-outline'></ion-icon>
+          <div className="login-password">
+            <ion-icon name="lock-closed-outline" />
             <input
-              className='login-password__input'
-              type='password'
-              placeholder='Confirm password'
+              className="login-password__input"
+              type="password"
+              placeholder="Confirm password"
             />
           </div>
         ) : null}
-        <button className='login-button'>
+        <button className="login-button" type="button">
           {selectedLogin ? 'Login' : 'Register'}
         </button>
-        <Link to='/' className='login-back'>
+        <Link to="/" className="login-back">
           Already got an account?
         </Link>
       </div>
     </div>
   );
-};
+}
 
 export default Login;

@@ -13,7 +13,7 @@
 - [ ] Create a register page (Functionality)
 - [ ] Create and implement an Error component
 - [x] Implement routing
-- [ ] Add prop-types
+- [x] Add prop-types
 - [ ] Add single page
 - [ ] Add comment section (Design)
 - [ ] Add comment section (Functionality)

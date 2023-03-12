@@ -1,4 +1,7 @@
-const Link = ({ to, className, children }) => {
+import React from 'react';
+import PropTypes from 'prop-types';
+
+function Link({ to, className, children }) {
   const preventReload = (event) => {
     event.preventDefault();
     window.history.pushState({}, '', to);
@@ -11,6 +14,12 @@ const Link = ({ to, className, children }) => {
       {children}
     </a>
   );
+}
+
+Link.propTypes = {
+  to: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Link;
