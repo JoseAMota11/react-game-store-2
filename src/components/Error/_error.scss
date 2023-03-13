@@ -1,0 +1,15 @@
+@use '../../scss/abstracts/variables' as var;
+
+.login-error {
+  display: flex;
+  width: 100%;
+  padding: var.$padding-small;
+  outline: var.$red solid 3px;
+  border-radius: var.$border-radius-small;
+  font-size: var.$font-size-smaller;
+  color: var.$white;
+}
+
+.outline {
+  outline: var.$red solid 3px;
+}
