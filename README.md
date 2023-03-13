@@ -9,9 +9,9 @@
 - [x] Adding responsiveness to the pagination
 - [x] Create a login page (Design)
 - [x] Create a register page (Design)
-- [ ] Create a login page (Functionality)
-- [ ] Create a register page (Functionality)
-- [ ] Create and implement an Error component
+- [x] Create a login page (Functionality)
+- [x] Create a register page (Functionality)
+- [x] Create and implement an Error component
 - [x] Implement routing
 - [x] Add ESLINT
 - [x] Add prop-types
