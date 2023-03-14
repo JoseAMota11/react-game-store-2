@@ -4,7 +4,7 @@ import Link from '../Router/Link';
 import { fetchSomething } from '../../classes/fetch';
 import { KEY, URL } from '../../helpers/constants';
 
-function Navbar({ setData, setTotalCount }) {
+function Navbar({ setData, setTotalCount, isUser, setIsUser }) {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -45,9 +45,15 @@ function Navbar({ setData, setTotalCount }) {
           />
         </li>
         <li className="navbar-list__login">
-          <Link to="/login" className="link">
-            Login
-          </Link>
+          {!isUser ? (
+            <Link to="/login" className="link">
+              Login
+            </Link>
+          ) : (
+            <button className="logout" type="button">
+              Logout
+            </button>
+          )}
         </li>
       </ul>
     </nav>
@@ -57,6 +63,8 @@ function Navbar({ setData, setTotalCount }) {
 Navbar.propTypes = {
   setData: PropTypes.func.isRequired,
   setTotalCount: PropTypes.func.isRequired,
+  isUser: PropTypes.bool.isRequired,
+  setIsUser: PropTypes.func.isRequired,
 };
 
 export default Navbar;

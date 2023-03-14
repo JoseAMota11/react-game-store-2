@@ -6,9 +6,10 @@ import { fetchSomething } from '../../classes/fetch';
 import Loading from '../Loading/Loading';
 import Platform from './components/Platform/Platform';
 
-function SinglePage({ gameExactName, gameId }) {
+function SinglePage({ setSinglePage, gameExactName, gameId }) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  // const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
     (async function getGames() {
@@ -24,7 +25,6 @@ function SinglePage({ gameExactName, gameId }) {
         search: gameExactName,
       };
 
-      setLoading(true);
       const result = await fetchSomething.get(URL, req, options);
       const gottenResult = result.results.filter((game) => game.id === gameId);
       setData(gottenResult);
@@ -32,9 +32,13 @@ function SinglePage({ gameExactName, gameId }) {
     })();
   }, []);
 
+  const handleClick = () => {
+    setSinglePage(false);
+  };
+
   return (
     <section className="single-page">
-      {loading && data.length > 0 ? (
+      {loading && data.length < 1 ? (
         <Loading />
       ) : (
         <div className="single-page-container">
@@ -48,16 +52,20 @@ function SinglePage({ gameExactName, gameId }) {
             }) => (
               <div key={id}>
                 <h3 className="single-page-name">{name}</h3>
+                <button onClick={handleClick} type="button" className="back">
+                  Back
+                </button>
                 <img
                   className="single-page-image"
                   src={backgroundImage}
                   alt={name}
                 />
-                <h3 className='single-page-platform'>Platforms</h3>
-                <span className='single-page-rating'>Rating: {rating}</span>
+                <span className="single-page-rating">Rating: {rating}</span>
+                <h3 className="single-page-platform">Platforms</h3>
                 {platforms.map(({ platform }) => (
-                  <Platform name={platform.name} />
+                  <Platform key={platform.name} name={platform.name} />
                 ))}
+                <Comment comments="" userId="" userName="" />
               </div>
             )
           )}
@@ -70,6 +78,7 @@ function SinglePage({ gameExactName, gameId }) {
 SinglePage.propTypes = {
   gameExactName: PropTypes.string.isRequired,
   gameId: PropTypes.number.isRequired,
+  setSinglePage: PropTypes.func.isRequired,
 };
 
 export default SinglePage;

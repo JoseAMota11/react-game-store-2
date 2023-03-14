@@ -18,6 +18,7 @@ function Home() {
   const [singlePage, setSinglePage] = useState(false);
   const [gameExactName, setGameExactName] = useState(null);
   const [gameId, setGameId] = useState(null);
+  const [isUser, setIsUser] = useState(false);
 
   useEffect(() => {
     (async function getGames() {
@@ -48,7 +49,12 @@ function Home() {
       {!singlePage ? (
         <Main>
           <div className="center">
-            <Navbar setData={setData} setTotalCount={setTotalCount} />
+            <Navbar
+              isUser={isUser}
+              setIsUser={setIsUser}
+              setData={setData}
+              setTotalCount={setTotalCount}
+            />
           </div>
           <div className="container">
             {loading ? (
@@ -77,7 +83,7 @@ function Home() {
           </div>
         </Main>
       ) : (
-        <SinglePage gameExactName={gameExactName} gameId={gameId} />
+        <SinglePage setSinglePage={setSinglePage} gameExactName={gameExactName} gameId={gameId} />
       )}
     </div>
   );

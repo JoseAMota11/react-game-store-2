@@ -52,6 +52,19 @@
         cursor: pointer;
         text-decoration: none;
       }
+      
+      .logout {
+        display: inline-block;
+        text-align: center;
+        width: 115.31px;
+        background-color: var.$red;
+        padding: var.$padding-smallest 0;
+        color: var.$white;
+        border-radius: var.$border-radius-small;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
   }
 

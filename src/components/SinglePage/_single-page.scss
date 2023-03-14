@@ -6,21 +6,34 @@
 
   &-container {
     color: var.$white;
-    width: var.$width-big;
+    width: var.$width-medium;
     padding: var.$padding-medium 0;
+
+    .back {
+      display: inline-block;
+      text-align: center;
+      width: 115.31px;
+      background-color: var.$white;
+      padding: var.$padding-smallest 0;
+      color: var.$navbar-blue;
+      border-radius: var.$border-radius-small;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: var.$margin-small;
+    }
 
     .single-page-name {
       margin-bottom: var.$margin-small;
     }
-    
+
     .single-page-image {
       width: 100%;
       border-radius: var.$border-radius-medium;
       box-shadow: var.$box-shadow-card;
     }
-    
+
     .single-page-rating {
-      
     }
   }
 }
