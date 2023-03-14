@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Link from '../Router/Link';
+import { fetchSomething } from '../../classes/fetch';
+import { KEY, URL } from '../../helpers/constants';
 
-function Navbar() {
+function Navbar({ setData, setTotalCount }) {
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    (async function getGameBySearch() {
+      const options = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      };
+
+      const req = {
+        key: KEY,
+        search,
+      };
+
+      const gameResult = await fetchSomething.get(URL, req, options);
+      setTotalCount(gameResult.count);
+      setData(gameResult.results);
+    })();
+  }, [search]);
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setSearch(() => value);
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -11,6 +41,7 @@ function Navbar() {
             className="list__search-input"
             placeholder="E.g. Minecraft"
             type="search"
+            onChange={handleChange}
           />
         </li>
         <li className="navbar-list__login">
@@ -22,5 +53,10 @@ function Navbar() {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  setData: PropTypes.func.isRequired,
+  setTotalCount: PropTypes.func.isRequired,
+};
 
 export default Navbar;

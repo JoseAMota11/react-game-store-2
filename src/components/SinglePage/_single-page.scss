@@ -1,0 +1,26 @@
+@use '../../scss/abstracts/variables' as var;
+@use '../../scss/abstracts/mixins' as mix;
+
+.single-page {
+  @include mix.flexbox(row, center, center, 0);
+
+  &-container {
+    color: var.$white;
+    width: var.$width-big;
+    padding: var.$padding-medium 0;
+
+    .single-page-name {
+      margin-bottom: var.$margin-small;
+    }
+    
+    .single-page-image {
+      width: 100%;
+      border-radius: var.$border-radius-medium;
+      box-shadow: var.$box-shadow-card;
+    }
+    
+    .single-page-rating {
+      
+    }
+  }
+}

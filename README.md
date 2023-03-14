@@ -15,6 +15,7 @@
 - [x] Implement routing
 - [x] Add ESLINT
 - [x] Add prop-types
+- [ ] Creating JSON Server DB
 - [ ] Add single page
 - [ ] Add comment section (Design)
 - [ ] Add comment section (Functionality)
@@ -22,3 +23,5 @@
 ## Links
 
 [Link of the project](https://applaudo-week5-beta.vercel.app/)
+[Link of the comments database](https://little-harmless-woodwind.glitch.me)
+[Link of the API](https://api.rawg.io/api/games?key=9e9681eb4e5d424f89f779e5bda3974e)

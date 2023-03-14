@@ -161,6 +161,7 @@ function Login() {
             onChange={(e) => handleChange(e)}
             name="password"
             maxLength={30}
+            minLength={8}
             value={user.password}
             ref={refPassword}
           />
@@ -175,6 +176,7 @@ function Login() {
               onChange={(e) => handleChange(e)}
               name="passwordConfirmation"
               maxLength={30}
+              minLength={8}
               value={user.passwordConfirmation}
               ref={refPasswordConfirmation}
             />
